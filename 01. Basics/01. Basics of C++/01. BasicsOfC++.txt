@@ -1,0 +1,403 @@
+#include<iostream>
+C++ library for input/output operations.
+
+#include<math.h>
+C++ library for all mathematical functions.
+
+#include<string>
+C++ library for strings.
+
+
+
+Basic skeleton of C++ code:
+
+#include<iostream>
+
+int main() {
+	std::cout << "Hello World!";
+	return 0;
+}
+
+
+
+Example:
+
+#include<iostream>
+
+int main() {
+	std::cout << "Hello World!" << "\n";
+	std::cout << "Hello World!";
+	return 0;
+}
+
+Output:
+Hello World!
+Hello World!
+
+
+
+Example:
+
+#include<iostream>
+
+int main() {
+	std::cout << "Hello World!" << std::endl;
+	std::cout << "Hello World!";
+	return 0;
+}
+
+Output:
+Hello World!
+Hello World!
+
+
+
+"endl" and "\n" takes the cursor to the next line.
+But "\n" is faster in comparison with "endl".
+
+
+
+Example:
+
+#include<iostream>
+using namespace std;
+
+int main() {
+	cout << "Hello World!" << "\n";
+	cout << "Hello World!";
+	return 0;
+}
+
+Output:
+Hello World!
+Hello World!
+
+
+
+Example:
+
+#include<iostream>
+using namespace std;
+
+int main() {
+	int x;
+	cin >> x;
+	cout << "Value of x is " << x;
+	return 0;
+}
+
+Input:
+5
+
+Output:
+Value of x is 5
+
+
+
+NOTE:
+#include<bits/stdc++.h>
+This header file is used to include all the standard libraries in C++ code.
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int x, y;
+	cin >> x >> y;
+	cout << "Value of x is " << x << " and y is " << y;
+	return 0;
+}
+
+Input:
+5 10
+
+Output:
+Value of x is 5 and y is 10
+
+
+
+Integer data types:
+int 
+long 
+long long 
+
+Decimal data types:
+float 
+double 
+long double 
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string s;
+	cin >> s;
+	cout << s;
+	return 0;
+}
+
+Input:
+Hello World!
+
+Output:
+Hello
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string s1;
+	string s2;
+	cin >> s1 >> s2;
+	cout << s1 << " " << s2;
+	return 0;
+}
+
+Input:
+Hello World!
+
+Output:
+Hello World!
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string str;
+	getline(cin, str);
+	cout << str;
+	return 0;
+}
+
+Input:
+Hello World!
+
+Output:
+Hello World!
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string str;
+	getline(cin, str);
+	cout << str;
+	return 0;
+}
+
+Input:
+Hello there, how are you?
+Good!
+
+Output:
+Hello there, how are you?
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	char ch;
+	cin >> ch;
+	cout << ch;
+	return 0;
+}
+
+Input:
+a
+
+Output:
+a
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int arr[5];
+	cin >> arr[0] >> arr[1] >> arr[2] >> arr[3] >> arr[4];
+	cout << arr[0];
+	return 0;
+}
+
+Input:
+5.5 4 3 2 1
+
+Output:
+5
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string s = "hello";
+	cout << s.length() << " " << s.size();
+	return 0;
+}
+
+Output:
+5 5
+
+
+
+Functions are set of code which performs something for you.
+
+Uses of Functions:
+- To modularize code.
+- To increase readability.
+- To use same code multiple times.
+
+
+
+Pass by value:
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void doSomething(string s) {
+	s[0] = 'H';
+	cout << s << "\n";
+}
+
+int main() {
+	string s = "hello";
+	doSomething(s);
+	cout << s << "\n";
+	return 0;
+}
+
+Output:
+Hello
+hello
+
+
+
+Pass by reference:
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void doSomething(string &s) {
+	s[0] = 'H';
+	cout << s << "\n";
+}
+
+int main() {
+	string s = "hello";
+	doSomething(s);
+	cout << s << "\n";
+	return 0;
+}
+
+
+Output:
+Hello
+Hello
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void doSomething(int &num) {
+	cout << num << "\n";
+	num += 5;
+	cout << num << "\n";
+	num += 5;
+	cout << num << "\n";
+}
+
+int main() {
+	int num = 10;
+	doSomething(num);
+	cout << num << "\n";
+	return 0;
+}
+
+Output:
+10
+15
+20
+20
+
+
+
+By default, Arrays are passed by reference in C++.
+
+
+
+Example:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void doSomething(int arr[], int n) {
+	arr[0] += 2;
+	cout << "Value inside function: " << arr[0] << "\n";
+}
+
+int main() {
+    int n = 5;
+	int arr[n];
+
+	for(int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+
+	doSomething(arr, n);
+	cout << "Value inside main: " << arr[0] << "\n";
+
+	return 0;
+}
+
+Input:
+5 10 15 20 25
+
+Output:
+Value inside function: 7
+Value inside main: 7
+
+
+
+Arrays are always passed by reference.
+Apart from this, with everything we have to pass "&" symbol for making it pass by reference.
+
+
+
+----------------------------------- Completed ---------------------------------

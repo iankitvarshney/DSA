@@ -1,0 +1,56 @@
+Time Complexity:
+The rate at which the time taken increases with respect to the input size.
+
+Time Complexity != Time taken
+
+
+
+Three rules for calculating Time Complexity:
+- Always compute Time Complexity in case of worst case scenario.
+- Avoid constants.
+- Avoid lower values.
+
+
+
+Example:
+
+for(int i = 0; i < n; i++) {
+  cout << "Something!";
+}
+
+Time Complexity: O(N * 3 + 2) => O(N)
+
+
+
+Big-Oh Notation => Worst Case 
+Theta Notation => Average Case 
+Omega Notation => Best Case 
+
+
+
+Space Complexity:
+
+Space Complexity = Auxiliary Space + Input Space 
+
+Auxiliary Space:
+Space that the code will take to solve the problem.
+
+Input Space:
+Space that the code will take to store the input.
+
+
+
+NOTE:
+Never manipulate the input given in the code.
+
+
+
+Most of the code servers take 1 second for approximately 10^8 operations.
+
+1s => 10^8 operations 
+2s => 2 * 10^8 operations 
+5s => 5 * 10^8 operations 
+
+
+
+--------------------------------------------- Completed ------------------------------------
