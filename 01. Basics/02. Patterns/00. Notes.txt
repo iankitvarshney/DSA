@@ -1,0 +1,10 @@
+Steps to follow:
+
+- For the outer loop, count the number of lines.
+- For the inner loop, focus on the columns and connect them somehow to the rows.
+- Print the element inside the inner for loop.
+- Observe symmetry [optional].
+
+
+
+---------------------------------------- Completed -----------------------------------
